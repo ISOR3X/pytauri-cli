@@ -12,7 +12,8 @@ A command-line interface tool for building and creating PyTauri projects.
 ## Installation
 
 ```bash
-pip install pytauri-cli
+uv tool install git+https://github.com/ISOR3X/pytauri-cli
+pytauri-cli
 ```
 
 ## Usage
