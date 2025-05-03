@@ -163,6 +163,7 @@ def install_pkg_to_pyembed(package_name: str, root: Path):
     ]
     result = subprocess.run(command, capture_output=True, text=True, check=True, shell=False)
     print(result.stdout)
+    print("Completed installation of package to pyembed")
 
 
 def embed_python():
