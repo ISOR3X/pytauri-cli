@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "copier>=9.7.1",
+    "requests>=2.31.0",
 ]
 
 [project.scripts]

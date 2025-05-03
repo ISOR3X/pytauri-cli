@@ -9,9 +9,7 @@ import argparse
 
 import copier
 
-
-def build():
-    print("Building will come at a later date!")
+from pytauri_cli.build import build_project, embed_python
 
 
 def create():
@@ -19,12 +17,12 @@ def create():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="My CLI tool with multiple commands")
+    parser = argparse.ArgumentParser(description="PyTauri CLI tool with multiple commands")
     subparsers = parser.add_subparsers(dest="command")
 
     subparsers.add_parser("build", help="Build the current project")
-
     subparsers.add_parser("create", help="Create a new project")
+    subparsers.add_parser("embed-python", help="Install a standalone python build for your project.")
 
     args = parser.parse_args()
 
@@ -34,9 +32,11 @@ def main():
         return
 
     if args.command == "build":
-        build()
+        build_project()
     elif args.command == "create":
         create()
+    elif args.command == "embed-python":
+        embed_python()
 
 
 if __name__ == "__main__":
